@@ -1,0 +1,15 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: machineinfo-service
+  labels:
+    app: machineinfo-app
+spec:
+  selector:
+    app: machineinfo-app
+  type: NodePort
+  ports:
+  - nodePort: 31000
+    port: 9000
+    targetPort: 9000
